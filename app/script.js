@@ -21,7 +21,7 @@ const personalMovieDB = {
 
 function rememberyFilms() {
     for (let i =0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?', ''),
+        const a = prompt('Один из последних просмотренных фильмов?', '').trim(),
               b = prompt('На сколько оцените его?', '');
     
         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
@@ -66,3 +66,20 @@ function writeYourGenres() {
 writeYourGenres();
 
 console.log(personalMovieDB);
+
+function calculateVolumeAndArea() {
+    if (typeof (length) !== 'number' || length < 0 || !Number.isInteger(length)) {
+        return "При вычислении произошла ошибка";
+    }
+
+    let volume = 0,
+        area = 0;
+
+    volume = length * length * length;
+    
+    area = 6 * (length * length);
+
+    return `Объем куба: ${volume}, площадь всей поверхности: ${area}`;
+}
+
+console.log(calculateVolumeAndArea(5));
