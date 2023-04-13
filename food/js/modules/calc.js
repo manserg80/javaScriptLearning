@@ -1,8 +1,6 @@
 function calc() {
-    // Calculator
-
     const result = document.querySelector('.calculating__result span');
-    
+
     let sex, height, weight, age, ratio;
 
     if (localStorage.getItem('sex')) {
@@ -108,4 +106,4 @@ function calc() {
 
 }
 
-module.exports = calc;
+export default calc;
